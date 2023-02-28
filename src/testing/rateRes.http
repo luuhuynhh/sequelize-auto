@@ -1,0 +1,27 @@
+
+POST http://localhost:8080/api/rate-res/createRateRes
+Content-Type: application/json
+
+{
+    "user_id" : 2,
+    "res_id" : 2,
+    "amount" : 0
+}
+
+###
+
+
+GET http://localhost:8080/api/rate-res/getRateResByRestaurant/1
+###
+
+GET http://localhost:8080/api/rate-res?res_id=1
+###
+
+GET http://localhost:8080/api/rate-res/getRateResByUser/1
+###
+
+GET http://localhost:8080/api/rate-res?user_id=1
+###
+
+GET http://localhost:8080/api/rate-res?user_id=1&res_id=2
+###

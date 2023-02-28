@@ -1,0 +1,11 @@
+POST http://localhost:8080/api/order/createOrder
+Content-Type: application/json
+
+{
+    "user_id": 2,
+    "food_id": 1,
+    "arr_sub_id": "[4]",
+    "amount": 2
+}
+
+###
