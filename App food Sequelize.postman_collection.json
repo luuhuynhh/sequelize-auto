@@ -1,0 +1,456 @@
+{
+	"info": {
+		"_postman_id": "2853821f-da9d-42c6-a85a-2f134f3b9336",
+		"name": "App food Sequelize",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21947952"
+	},
+	"item": [
+		{
+			"name": "Xử lý like nhà hàng",
+			"item": [
+				{
+					"name": "[GET] Lấy danh sách like theo nhà hàng",
+					"item": [
+						{
+							"name": "[GET] Lấy danh sách like theo nhà hàng",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/like-res/getLikeResByRestaurant/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"like-res",
+										"getLikeResByRestaurant",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "[GET] API-v2 Lấy ds like theo nhà hàng",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/like-res?res_id=1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"like-res"
+									],
+									"query": [
+										{
+											"key": "res_id",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "[GET] Lấy danh sách like theo user",
+					"item": [
+						{
+							"name": "[GET] Lấy danh sách like theo user",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/like-res/getLikeResByUser/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"like-res",
+										"getLikeResByUser",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "[GET] API-v2 Lấy ds like theo user",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/like-res?user_id=1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"like-res"
+									],
+									"query": [
+										{
+											"key": "user_id",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "[POST] Like nhà hàng",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "user_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "res_id",
+									"value": "2",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/like-res/createLikeRes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"like-res",
+								"createLikeRes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "[POST] Unlike nhà hàng",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "user_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "res_id",
+									"value": "2",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/like-res/unLikeRes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"like-res",
+								"unLikeRes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "[GET] Lấy ds like theo nhà hàng và user",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/like-res?res_id=1&user_id=3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"like-res"
+							],
+							"query": [
+								{
+									"key": "res_id",
+									"value": "1"
+								},
+								{
+									"key": "user_id",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Xử lý đánh giá nhà hàng",
+			"item": [
+				{
+					"name": "[GET] Lấy ds đánh giá theo nhà hàng",
+					"item": [
+						{
+							"name": "[GET] Lấy danh sách đánh giá theo nhà hàng",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/rate-res/getRateResByRestaurant/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"rate-res",
+										"getRateResByRestaurant",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "[GET] API-v2 Lấy ds đánh giá theo nhà hàng",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/rate-res?res_id=3",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"rate-res"
+									],
+									"query": [
+										{
+											"key": "res_id",
+											"value": "3"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "[GET] Lấy ds đánh giá theo user",
+					"item": [
+						{
+							"name": "[GET] Lấy danh sách đánh giá theo user",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/rate-res/getRateResByUser/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"rate-res",
+										"getRateResByUser",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "[GET] API-v2 Lấy ds đánh giá theo user",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/api/rate-res?user_id=2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"rate-res"
+									],
+									"query": [
+										{
+											"key": "user_id",
+											"value": "2"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "[POST] Thêm đánh giá",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "user_id",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "res_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "amount",
+									"value": "5",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/rate-res/createRateRes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"rate-res",
+								"createRateRes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "[GET] Lấy danh sách đánh giá theo nhà hàng và user",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/rate-res?user_id=1&res_id=2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"rate-res"
+							],
+							"query": [
+								{
+									"key": "user_id",
+									"value": "1"
+								},
+								{
+									"key": "res_id",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Xử lý đặt món",
+			"item": [
+				{
+					"name": "[POST] Thêm order",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "user_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "food_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "arr_sub_id",
+									"value": "[4]",
+									"type": "text"
+								},
+								{
+									"key": "amount",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/order/createOrder",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"order",
+								"createOrder"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
